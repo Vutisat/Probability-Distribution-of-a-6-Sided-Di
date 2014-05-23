@@ -11,6 +11,16 @@ public class DiceSim {
 		System.out.println("====================================================");
 		System.out.print("10         ");
 		rollingDice(10);
+		System.out.print("100        ");
+		rollingDice(100);
+		System.out.print("1000       ");
+		rollingDice(1000);
+		System.out.print("10000      ");
+		rollingDice(10000);
+		System.out.print("100000     ");
+		rollingDice(100000);
+		System.out.print("1000000    ");
+		rollingDice(1000000);
 	}
 	
 	public static void rollingDice(int n){
@@ -24,7 +34,7 @@ public class DiceSim {
 		
 		for(int i = 0; i < n; i++){
 			int roll;
-			roll = (int) (Math.random() * (6 - 1) + 2);
+			roll = (int)(6.0 * Math.random()) + 1;
 			
 			if(roll == 1){
 				ones++;
@@ -46,7 +56,7 @@ public class DiceSim {
 		System.out.printf("%05.2f%2s", ((threes/n) *100), "% ");
 		System.out.printf("%05.2f%2s", ((fours/n) *100), "% ");
 		System.out.printf("%05.2f%2s", ((fives/n) *100), "% ");
-		System.out.printf("%05.2f%2s", ((sixes/n) *100), "% ");
+		System.out.printf("%05.2f%2s%n", ((sixes/n) *100), "% ");
 	}
 
 }
