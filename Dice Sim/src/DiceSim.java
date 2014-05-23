@@ -9,18 +9,18 @@ public class DiceSim {
 
 		System.out.println("# of Rolls 1s     2s     3s     4s     5s     6s  ");
 		System.out.println("====================================================");
-		System.out.println("10         ");
+		System.out.print("10         ");
 		rollingDice(10);
 	}
 	
 	public static void rollingDice(int n){
 		
-		int ones = 0;
-		int twos = 0;
-		int threes = 0;
-		int fours = 0;
-		int fives = 0;
-		int sixes = 0;
+		double ones = 0;
+		double twos = 0;
+		double threes = 0;
+		double fours = 0;
+		double fives = 0;
+		double sixes = 0;
 		
 		for(int i = 0; i < n; i++){
 			int roll;
@@ -41,12 +41,12 @@ public class DiceSim {
 			}
 		}
 		
-		System.out.print(ones + " ");
-		System.out.print(twos + " ");
-		System.out.print(threes + " ");
-		System.out.print(fours + " ");
-		System.out.print(fives + " ");
-		System.out.print(sixes + " ");
+		System.out.printf("%05.2f%2s", ((ones/n) *100), "% ");
+		System.out.printf("%05.2f%2s", ((twos/n) *100), "% ");
+		System.out.printf("%05.2f%2s", ((threes/n) *100), "% ");
+		System.out.printf("%05.2f%2s", ((fours/n) *100), "% ");
+		System.out.printf("%05.2f%2s", ((fives/n) *100), "% ");
+		System.out.printf("%05.2f%2s", ((sixes/n) *100), "% ");
 	}
 
 }
